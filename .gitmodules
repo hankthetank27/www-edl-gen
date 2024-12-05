@@ -1,0 +1,3 @@
+[submodule "themes/hugo-dead-simple"]
+	path = themes/hugo-dead-simple
+	url = https://github.com/hankthetank27/hugo-dead-simple.git

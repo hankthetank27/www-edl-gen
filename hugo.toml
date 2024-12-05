@@ -1,0 +1,23 @@
+baseURL = 'https://example.org/'
+languageCode = 'en-us'
+title = 'EDLgen'
+theme = "hugo-dead-simple"
+
+[params]
+custom_css = ["css/custom.css"]
+
+[[menu.main]]
+name = "<u>H</u>ome"
+url = "/"
+weight = 1
+
+[[menu.main]]
+name = "<u>I</u>nstall"
+url = "/install"
+weight = 2
+
+[[menu.main]]
+name = "<u>D</u>ocumentation"
+url = "/documentation"
+weight = 3
+
