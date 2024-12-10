@@ -7,17 +7,16 @@ theme = "hugo-dead-simple"
 custom_css = ["css/custom.css"]
 
 [[menu.main]]
-name = "<u>H</u>ome"
-url = "/"
-weight = 1
-
-[[menu.main]]
 name = "<u>I</u>nstall"
 url = "/install"
-weight = 2
+weight = 1
 
 [[menu.main]]
 name = "<u>D</u>ocumentation"
 url = "/documentation"
-weight = 3
+weight = 2
 
+[[menu.main]]
+name = "<u>C</u>ontact"
+url = "/contact"
+weight = 3

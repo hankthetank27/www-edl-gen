@@ -1,7 +1,8 @@
 +++
 date = '2024-12-05'
 +++
-# EDLgen # {#main-heading}
+# EDLgen # 
+<!-- {#main-heading} -->
 
 ### Generate EDL files from live triggers over HTTP ###  
 

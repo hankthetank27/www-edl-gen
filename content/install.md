@@ -1,7 +1,5 @@
 +++
-date = '2024-12-05'
 title = 'Install'
-toc = true
 +++
 ## From Package ##
 

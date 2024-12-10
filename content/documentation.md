@@ -1,5 +1,4 @@
 +++
-date = '2024-12-05'
 title = 'Documentation'
 toc = true
 +++
@@ -57,7 +56,7 @@ Closes the server if already launched, allowing you to reconfigure your settings
 
 The event trigger API describes how the EDLgen server expects to receive events, and what type of metadata the events and ingest and log. 
 
-To trigger an edit event, an HTTP POST request must be sent to the configured TCP port number, with a JSON payload containing the event metadata. For instance if you configured your port to be 9000, over your local network you would ping `127.0.0.1:9000/{even_name_here}`.
+To trigger an edit event, an HTTP POST request must be sent to the configured TCP port number, with a JSON payload containing the event metadata. For instance if you configured your port to be 9000, over your local network you would ping `127.0.0.1:9000/{event_name_here}`.
 
 ### JSON Payload ###
 Each event type expects the same JSON payload structure:
@@ -74,17 +73,17 @@ Each event type expects the same JSON payload structure:
     } 
 }
 ```
-- `edit_type`: Specifies what the edit type should be - either a cut, a wipe or a dissolve. If the edit type is a dissolve or a wipe, a duration in required in the `edit_duration_frames` field. Wipes can also optionally have a wipe number which can tell the editing system which wipe to use. This is specified in the `wipe_num` field.
+- `edit_type` - Specifies what the edit type should be - either a cut, a wipe or a dissolve. If the edit type is a dissolve or a wipe, a duration in required in the `edit_duration_frames` field. Wipes can also optionally have a wipe number which can tell the editing system which wipe to use. This is specified in the `wipe_num` field.
 
-- `edit_duration_frames`: Specifies the length of the edit in frames. This value is required for dissolves and wipes. For cuts it is ignored.
+- `edit_duration_frames` - Specifies the length of the edit in frames. This value is required for dissolves and wipes. For cuts it is ignored.
 
-- `wipe_num`: Optionally specifies which wipe should be used by the editing system (defaults to `1`). This value is ignored for cuts and dissolves.
+- `wipe_num` - Optionally specifies which wipe should be used by the editing system (defaults to `1`). This value is ignored for cuts and dissolves.
 
-- `source_tape`: Specifies the name of the of the tape the edit is being made for. This typically would be the name of the file the source of the video will correspond with in your editing software. The file extension might be needed in such a case depending on the editing software you use.
+- `source_tape` - Specifies the name of the of the tape the edit is being made for. This typically would be the name of the file the source of the video will correspond with in your editing software. The file extension might be needed in such a case depending on the editing software you use.
 
-- `av_channels`: Specifies the video and audio channels.
-    - `video`: Specifies if the channel contains video.
-    - `audio`: Specifies the number of audio channels.
+- `av_channels` - Specifies the video and audio channels.
+    - `video` - Specifies if the channel contains video.
+    - `audio` - Specifies the number of audio channels.
 
 
 Examples...
